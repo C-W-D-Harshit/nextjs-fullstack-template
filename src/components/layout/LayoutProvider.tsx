@@ -1,12 +1,12 @@
 "use client";
 import { usePathname } from "next/navigation";
-import Header from "./Header";
-import Sidebar from "./Sidebar";
+// import Header from "./Header";
+// import Sidebar from "./Sidebar";
 import "@/styles/layout/user/layout.scss";
 // import ScrollToTop from "react-scroll-to-top";
-import AdminSidebar from "../adminLayout/Sidebar";
-import AdminHeader from "../adminLayout/Header";
-import NextTopLoader from "nextjs-toploader";
+// import AdminSidebar from "../adminLayout/Sidebar";
+// import AdminHeader from "../adminLayout/Header";
+// import NextTopLoader from "nextjs-toploader";
 
 const LayoutProvider = ({ children }: { children: React.ReactNode }) => {
   const path = usePathname();
