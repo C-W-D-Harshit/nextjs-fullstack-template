@@ -1,0 +1,67 @@
+@use "../../colors";
+
+.mobHeader {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  z-index: 1000;
+  // background-color: #18181a;
+  background-color: #fff;
+  width: 100%;
+  height: 8rem;
+  justify-content: space-around;
+  align-items: center;
+  border-top-left-radius: 3rem;
+  border-top-right-radius: 3rem;
+  font-size: 2.7rem;
+  user-select: none;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  > * {
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    position: relative;
+  }
+  .bt {
+    color: #18181a;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+}
+
+[data-theme="dark"] .mobHeader {
+  background-color: #18181a !important;
+}
+.dark {
+  background-color: #18181a !important;
+}
+.spa {
+  position: absolute;
+  top: 0;
+  right: -1rem;
+  width: 2rem;
+  height: 2rem;
+  background-color: colors.$yellow;
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: black !important;
+}
+
+@media (max-width: 768px) {
+  .mobHeader {
+    display: flex;
+  }
+}

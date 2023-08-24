@@ -1,0 +1,68 @@
+@use "../../colors";
+
+.layout {
+  width: 100%;
+  height: 100vh;
+  //   background-color: aqua;
+  display: flex;
+  overflow: hidden;
+  > :last-child {
+    width: 100%;
+    padding: 0 4rem;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+  }
+}
+
+.adminLayout {
+  width: 100%;
+  height: 100vh;
+  //   background-color: aqua;
+  display: flex;
+  overflow: hidden;
+  > :last-child {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+    background-color: colors.$gray-50;
+    > :last-child {
+      padding: 3rem;
+    }
+  }
+  > :last-child::-webkit-scrollbar-track {
+    /* -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
+    background-color: #e8f8fd;
+  }
+
+  > :last-child::-webkit-scrollbar {
+    width: 0.8rem;
+    background-color: #5c59e8;
+  }
+
+  > :last-child::-webkit-scrollbar-thumb {
+    background-color: #5c59e8;
+    background-image: -webkit-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.2) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgba(255, 255, 255, 0.2) 50%,
+      rgba(255, 255, 255, 0.2) 75%,
+      transparent 75%,
+      transparent
+    );
+  }
+}
+
+@media (max-width: 768px) {
+  .layout {
+    > :last-child {
+      padding: 0 2rem;
+      > :last-child {
+        margin-bottom: 8rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,265 @@
+@use "../colors";
+
+.adminProducts {
+  width: 100%;
+  > * {
+    margin: 2rem 0;
+  }
+  > :first-child {
+    margin-top: 0;
+  }
+  > :last-child {
+    margin-bottom: 0;
+  }
+  .dl {
+    color: colors.$gray-400;
+  }
+  .adminProducts_tit {
+    font-size: 3rem;
+    font-weight: 600;
+  }
+  .adminProducts_table {
+    width: 100%;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 1.6rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    .adminProducts_table_top {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+      .adminProducts_table_search {
+        width: 100%;
+        max-width: 30rem;
+        display: flex;
+        align-items: center;
+        padding: 1rem 1.5rem;
+        border: 1px solid white;
+        border-radius: 1rem;
+        font-size: 1.4rem;
+        font-weight: 500;
+        background-color: colors.$gray-50;
+        color: black !important;
+        > :first-child {
+          margin-right: 1rem;
+          font-size: 2.5rem;
+        }
+        > :last-child {
+          color: black !important;
+        }
+      }
+      > button {
+        padding: 1rem 1.5rem;
+        border-radius: 0.5rem;
+        background-color: colors.$primary-500;
+        color: #fff;
+        font-size: 1.8rem;
+        font-weight: 600;
+        transition: 0.5s ease-in-out;
+      }
+      > button:hover {
+        background-color: colors.$primary-700;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.adminPagination {
+  width: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 1rem 1.5rem !important;
+  button {
+    padding: 0.5rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: colors.$primary-100 !important;
+    border-radius: 1rem !important;
+    border-color: colors.$primary-100 !important;
+    border: none !important;
+    color: colors.$primary-500 !important;
+    font-size: 2rem !important;
+    transition: 0.5s ease-in-out !important;
+  }
+  button:hover {
+    background-color: colors.$primary-500 !important;
+    border-color: colors.$primary-500 !important;
+    color: colors.$white !important;
+  }
+  > :first-child {
+    width: fit-content !important;
+  }
+  > :last-child {
+    width: fit-content !important;
+    display: flex;
+    align-items: center;
+    > * {
+      margin: 0 0.5rem !important;
+    }
+  }
+}
+
+.adminProducts_holder {
+  width: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid colors.$gray-100;
+  > * {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 6rem;
+    background-color: colors.$white;
+    padding: 0 2rem;
+    border: 1px solid colors.$gray-50;
+    font-size: 1.4rem;
+    transition: 0.5s ease-in-out;
+
+    > * {
+      width: 12.5%;
+      text-transform: capitalize;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      margin: 0 1rem;
+      text-align: center;
+    }
+    > :first-child {
+      width: 4%;
+    }
+    > :nth-child(2) {
+      text-align: left;
+      width: 20%;
+    }
+  }
+  > :first-child {
+    font-size: 1.7rem;
+    font-weight: 600;
+    background-color: colors.$gray-50;
+  }
+}
+
+.adminProducts_holder > *:hover {
+  background-color: colors.$gray-50;
+}
+
+.adminCategory_name {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+  height: 100%;
+  > :first-child {
+    width: 5rem !important;
+    height: 5rem !important;
+    border-radius: 0.5rem;
+    overflow: none;
+    margin-right: 1rem;
+    background-color: colors.$gray-100;
+    padding: 0.5rem;
+    > :first-child {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      aspect-ratio: 1/1;
+      border-radius: inherit;
+    }
+  }
+  > :last-child {
+    > :first-child {
+      font-size: 1.7rem;
+      font-weight: 500;
+    }
+    > :last-child {
+      color: colors.$black-500;
+    }
+  }
+}
+
+.sellerAct {
+  padding: 0.5rem 1rem;
+  background-color: colors.$gray-50;
+  color: colors.$black-700 !important;
+  height: 80%;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pb {
+  background-color: colors.$green-100;
+  color: colors.$green-500 !important;
+}
+
+.adminProducts_holder > *:hover {
+  background-color: colors.$gray-50;
+}
+
+.adminCategory_holder {
+  width: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid colors.$gray-100;
+  > * {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 6rem;
+    background-color: colors.$white;
+    padding: 0 2rem;
+    border: 0.5px solid colors.$gray-50;
+    font-size: 1.3rem;
+    transition: 0.5s ease-in-out;
+
+    > * {
+      width: 10%;
+      text-transform: capitalize;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      margin: 0 1rem;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    > :first-child {
+      width: 5%;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+    > :nth-child(2) {
+      width: 70%;
+      justify-content: flex-start;
+    }
+    > :last-child {
+      > * {
+        cursor: pointer;
+        font-size: 1.7rem;
+      }
+      > *:hover {
+        color: colors.$black-900;
+      }
+      > :first-child {
+        margin-right: 1rem;
+        color: colors.$black-500;
+      }
+    }
+  }
+  > :first-child {
+    font-size: 1.7rem !important;
+    font-weight: 600 !important;
+    background-color: colors.$gray-50;
+  }
+}
+
+.adminCategory_holder > *:hover {
+  background-color: colors.$gray-50;
+}
